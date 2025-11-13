@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    @apply bg-white text-gray-900;
+    color-scheme: light dark;
+    color: rgba(0, 0, 0, 0.87);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold text-gray-900;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-block bg-secondary text-white px-6 py-3 rounded font-semibold transition-all duration-300 hover:bg-pink-600 hover:translate-y-[-2px];
+  }
+  
+  .btn-outline {
+    @apply bg-transparent border-2 border-secondary text-secondary hover:bg-secondary hover:text-white;
+  }
+  
+  .section-title {
+    @apply text-center mb-12;
+  }
+  
+  .section-title h2 {
+    @apply text-4xl font-bold text-primary-600 mb-4;
+  }
+  
+  .section-title p {
+    @apply text-gray-600 max-w-2xl mx-auto;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Custom gradient text class */
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-secondary-500;
+  }
+
+  /* Custom gradient background */
+  .gradient-bg {
+    @apply bg-gradient-to-r from-primary-500 to-secondary-500;
+  }
+}
+
+a {
+  font-weight: 500;
+  color: var(--primary-light);
+  text-decoration: inherit;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: var(--secondary-light);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  border-color: var(--primary-light);
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+  outline-color: var(--primary-light);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #1e1b4b;
+    background: linear-gradient(135deg, #f3e8ff 0%, #fce7f3 100%);
+  }
+  a {
+    color: var(--primary);
+  }
+  a:hover {
+    color: var(--secondary);
+  }
+  button {
+    color: white;
+    background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+  }
+  button:hover {
+    opacity: 0.9;
+  }
+}
