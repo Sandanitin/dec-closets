@@ -6,9 +6,9 @@ const Logo = () => (
     <img 
       src="/logo.png" 
       alt="Dec Closets Logo" 
-      className="h-32 w-auto" // Increased from h-24 to h-32
+      className="h-12 w-auto" // Decreased from h-16 to h-10
     />
-
+    {/* <span className="text-xl font-bold text-gray-800">Dec Closets</span> */}
   </div>
 );
 
@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
     <nav className="bg-white shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-20">
+        <div className="flex justify-between h-16">
           <div className="flex">
             <div className="flex-shrink-0 flex items-center">
               <Link to="/" className="flex items-center">

@@ -13,7 +13,7 @@ const Closets = () => {
         'Integrated lighting solutions',
         'Island and seating options'
       ],
-      image: '/images/walk-in-closet.jpg',
+      image: 'https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
       cta: 'Design Your Walk-In Closet',
       price: 'Starting at $3,500'
     },
@@ -27,7 +27,7 @@ const Closets = () => {
         'Quality craftsmanship',
         'Flexible storage options'
       ],
-      image: '/images/custom-closet.jpg',
+      image: 'https://images.unsplash.com/photo-1600210492767-7a2a9c4e7f6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1974&q=80',
       cta: 'Explore Custom Options',
       price: 'Starting at $2,500'
     },
@@ -41,7 +41,7 @@ const Closets = () => {
         'Easy access organization',
         'Budget-friendly options'
       ],
-      image: '/images/reach-in-closet.jpg',
+      image: 'https://images.unsplash.com/photo-1600121848594-d8644e57abab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80', // Changed to a bedroom with built-in closets
       cta: 'View Reach-In Designs',
       price: 'Starting at $1,200'
     }
@@ -70,6 +70,10 @@ const Closets = () => {
                   src={closet.image} 
                   alt={closet.title}
                   className="w-full h-full object-cover"
+                  onError={(e) => {
+                    // Fallback image if the original fails to load
+                    e.target.src = 'https://images.unsplash.com/photo-1600494603989-9650cf6ddd3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80';
+                  }}
                 />
               </div>
               

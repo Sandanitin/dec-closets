@@ -6,6 +6,8 @@ import Closets from '../components/Closets';
 import Services from '../components/Services';
 import About from '../components/About';
 import Contact from '../components/Contact';
+import Gallery from '../components/Gallery';
+import ScrollToTop from '../components/ScrollToTop';
 import Footer from '../components/Footer';
 import './index.css';
 
@@ -14,6 +16,7 @@ function App() {
     <Router>
       <div className="min-h-screen flex flex-col">
         <Navbar />
+        <ScrollToTop />
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
@@ -21,6 +24,7 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/gallery" element={<Gallery />} />
           </Routes>
         </main>
         <Footer />

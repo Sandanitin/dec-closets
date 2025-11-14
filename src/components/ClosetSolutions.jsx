@@ -11,7 +11,7 @@ const solutions = [
       'Integrated lighting solutions',
       'Island and seating options'
     ],
-    image: '/images/walk-in-closet.jpg',
+    image: 'https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
     link: '/closets/walk-in'
   },
   {
@@ -23,7 +23,7 @@ const solutions = [
       'Quality craftsmanship',
       'Flexible storage options'
     ],
-    image: '/images/custom-closet.jpg',
+    image: 'https://images.unsplash.com/photo-1600210492767-7a2a9c4e7f6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1974&q=80',
     link: '/closets/custom'
   },
   {
@@ -35,7 +35,7 @@ const solutions = [
       'Easy access organization',
       'Budget-friendly options'
     ],
-    image: '/images/reach-in-closet.jpg',
+    image: 'https://images.unsplash.com/photo-1600121848594-d8644e57abab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80', // Changed to a bedroom with built-in closets
     link: '/closets/reach-in'
   }
 ];
@@ -64,6 +64,10 @@ const ClosetSolutions = () => {
                   src={solution.image} 
                   alt={solution.title}
                   className="w-full h-full object-cover"
+                  onError={(e) => {
+                    // Fallback image if the original fails to load
+                    e.target.src = 'https://images.unsplash.com/photo-1600494603989-9650cf6ddd3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80';
+                  }}
                 />
               </div>
               <div className="p-6">

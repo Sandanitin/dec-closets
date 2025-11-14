@@ -3,49 +3,49 @@ import React, { useState, useEffect } from 'react';
 const galleryImages = [
   {
     id: 1,
-    src: 'https://images.unsplash.com/photo-1616486336120-6d5bf5d82eef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+    src: 'https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
     alt: 'Modern walk-in closet',
     category: 'walk-in'
   },
   {
     id: 2,
-    src: 'https://images.unsplash.com/photo-1600210492493-094691a317a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80',
+    src: 'https://images.unsplash.com/photo-1600210492493-094691a317a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1974&q=80',
     alt: 'Reach-in closet',
     category: 'reach-in'
   },
   {
     id: 3,
-    src: 'https://images.unsplash.com/photo-1600210492767-7a2a9c4e7f6e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80',
+    src: 'https://images.unsplash.com/photo-1600210492767-7a2a9c4e7f6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1974&q=80',
     alt: 'Custom wardrobe',
     category: 'wardrobe'
   },
   {
     id: 4,
-    src: 'https://images.unsplash.com/photo-1600607686527-6fb886090705?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+    src: 'https://images.unsplash.com/photo-1600607686527-6fb886090705?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
     alt: 'Walk-in closet with island',
     category: 'walk-in'
   },
   {
     id: 5,
-    src: 'https://images.unsplash.com/photo-1600121848594-d8644e57abab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+    src: 'https://images.unsplash.com/photo-1600121848594-d8644e57abab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
     alt: 'Modern bedroom with built-in closets',
     category: 'bedroom'
   },
   {
     id: 6,
-    src: 'https://images.unsplash.com/photo-1595526114035-0d45a16a9185?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+    src: 'https://images.unsplash.com/photo-1595526114035-0d45a16a9185?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
     alt: 'Luxury walk-in closet',
     category: 'walk-in'
   },
   {
     id: 7,
-    src: 'https://images.unsplash.com/photo-1616486336120-6d5bf5d82eef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+    src: 'https://images.unsplash.com/photo-1616486336120-6d5bf5d82eef?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
     alt: 'Modern closet design',
     category: 'modern'
   },
   {
     id: 8,
-    src: 'https://images.unsplash.com/photo-1600210492493-094691a317a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80',
+    src: 'https://images.unsplash.com/photo-1600210492493-094691a317a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1974&q=80',
     alt: 'Organized reach-in closet',
     category: 'reach-in'
   }
@@ -120,6 +120,10 @@ const Gallery = () => {
                 src={image.src} 
                 alt={image.alt} 
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                onError={(e) => {
+                  // Fallback image if the original fails to load
+                  e.target.src = 'https://images.unsplash.com/photo-1600494603989-9650cf6ddd3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80';
+                }}
               />
               <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
                 <div className="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
@@ -154,6 +158,10 @@ const Gallery = () => {
                 src={selectedImage.src} 
                 alt={selectedImage.alt} 
                 className="w-full max-h-[80vh] object-contain"
+                onError={(e) => {
+                  // Fallback image if the original fails to load
+                  e.target.src = 'https://images.unsplash.com/photo-1600494603989-9650cf6ddd3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80';
+                }}
               />
               <div className="mt-2 text-white text-center">
                 <p className="font-medium">{selectedImage.alt}</p>
