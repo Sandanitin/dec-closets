@@ -8,7 +8,7 @@ const Logo = () => (
       alt="Dec Closets Logo" 
       className="h-16 w-auto" // Increased from h-12 to h-16
     />
-    <span className="text-xl font-bold text-gray-800">Dec Closets</span> // Kept text size the same
+
   </div>
 );
 
