@@ -6,7 +6,7 @@ const Logo = () => (
     <img 
       src="/logo.png" 
       alt="Dec Closets Logo" 
-      className="h-16 w-auto" // Increased from h-12 to h-16
+      className="h-32 w-auto" // Increased from h-24 to h-32
     />
 
   </div>
