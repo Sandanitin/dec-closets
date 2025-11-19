@@ -27,11 +27,11 @@ const About = () => {
             </p>
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-white p-4 rounded-lg shadow">
-                <h3 className="font-semibold text-purple-600">10+ Years</h3>
+                <h3 className="font-semibold text-purple-600">3+ Years</h3>
                 <p className="text-sm text-gray-600">Experience</p>
               </div>
               <div className="bg-white p-4 rounded-lg shadow">
-                <h3 className="font-semibold text-purple-600">1000+</h3>
+                <h3 className="font-semibold text-purple-600">100+</h3>
                 <p className="text-sm text-gray-600">Projects Completed</p>
               </div>
               <div className="bg-white p-4 rounded-lg shadow">

@@ -12,7 +12,7 @@ const solutions = [
       'Island and seating options'
     ],
     image: 'https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-    link: '/closets' // Changed to main closets page
+    link: '/closets/walk-in'
   },
   {
     title: 'Custom Closets',
@@ -24,7 +24,7 @@ const solutions = [
       'Flexible storage options'
     ],
     image: 'https://images.unsplash.com/photo-1600210492767-7a2a9c4e7f6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1974&q=80',
-    link: '/closets' // Changed to main closets page
+    link: '/closets/custom'
   },
   {
     title: 'Reach-In Closets',
@@ -36,7 +36,7 @@ const solutions = [
       'Budget-friendly options'
     ],
     image: 'https://images.unsplash.com/photo-1600121848594-d8644e57abab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80', // Changed to a bedroom with built-in closets
-    link: '/closets' // Changed to main closets page
+    link: '/closets/reach-in'
   }
 ];
 

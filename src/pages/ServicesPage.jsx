@@ -245,7 +245,7 @@ const ServicesPage = () => {
     },
     {
       icon: '🚗',
-      title: 'Garages',
+      title: 'Garage Storage',
       description: 'Maximize your garage space with custom storage solutions for vehicles, tools, and equipment.',
       features: [
         'Overhead storage racks',
@@ -253,19 +253,60 @@ const ServicesPage = () => {
         'Sports equipment storage',
         'Seasonal item organization'
       ]
+    },
+    {
+      icon: '⚙️',
+      title: 'CNC Services',
+      description: 'Advanced 3D carving CNC router services for precision cutting and intricate designs on various materials including wood, MDF, and plastics for custom storage solutions.',
+      features: [
+        '3D carving and routing capabilities',
+        'Precision cutting on multiple materials',
+        'Intricate design patterns and details',
+        'Fast turnaround times'
+      ]
+    },
+    {
+      icon: '🚪',
+      title: 'MDF Doors',
+      description: 'High-quality MDF doors with smooth finishes, perfect for custom closet systems.',
+      features: [
+        'Smooth, paint-ready surfaces',
+        'Consistent quality and durability',
+        'Custom sizing available',
+        'Environmentally friendly materials'
+      ]
+    },
+    {
+      icon: '🚪',
+      title: 'TrueCore Doors',
+      description: 'Premium steel doors from TrueCore.ca featuring 12-15 door options with superior durability and security. Choose from our curated selection of high-quality steel doors designed for long-lasting performance.',
+      features: [
+        '12-15 premium door style options',
+        'Superior steel construction',
+        'Enhanced security features',
+        'Long-lasting durability',
+        'Professional installation'
+      ]
     }
   ];
 
   const technologies = [
+
+   
     {
       icon: '⚙️',
       title: 'CNC Technology',
-      description: 'We utilize state-of-the-art CNC machinery to ensure precision cuts and perfect fits for all our custom components.'
+      description: 'Our advanced 3D carving CNC router technology enables precision cutting and intricate designs on various materials including wood, MDF, and plastics for custom storage solutions.'
     },
     {
       icon: '🚪',
       title: 'MDF Doors',
       description: 'Our premium MDF doors offer durability and a smooth finish, providing the perfect canvas for any paint or finish.'
+    },
+    {
+      icon: '🚪',
+      title: 'TrueCore Doors',
+      description: 'Premium steel doors from TrueCore.ca featuring 12-15 distinct door styles, offering superior durability and security for your custom storage solutions. Each door is crafted with high-quality steel for long-lasting performance.'
     },
     {
       icon: '📐',
@@ -325,26 +366,15 @@ const ServicesPage = () => {
                 opacity: 0.1
               }}
               animate={{
-                x: [0, (Math.random() - 0.5) * 100],
-                y: [0, (Math.random() - 0.5) * 100],
-                opacity: [0.1, 0.15, 0.1]
-              }}
-              transition={{
-                duration: 10 + Math.random() * 20,
-                repeat: Infinity,
-                repeatType: 'reverse',
-                ease: 'easeInOut'
-              }}
-              animate={{
                 y: [0, 50, 0],
                 x: [0, Math.random() * 100 - 50, 0],
-                opacity: [0.05, 0.1, 0.05],
-                transition: {
-                  duration: Math.random() * 10 + 10,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  repeatType: 'reverse'
-                }
+                opacity: [0.05, 0.1, 0.05]
+              }}
+              transition={{
+                duration: Math.random() * 10 + 10,
+                repeat: Infinity,
+                ease: "easeInOut",
+                repeatType: 'reverse'
               }}
             />
           ))}
