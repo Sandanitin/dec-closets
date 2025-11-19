@@ -7,7 +7,7 @@ const About = () => {
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-8 md:mb-0 md:pr-8">
             <img 
-              src="https://images.unsplash.com/photo-1600607686527-6fb886090705?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" 
+              src="/hero3.jpg" 
               alt="About Dec Closets" 
               className="rounded-lg shadow-lg w-full"
             />

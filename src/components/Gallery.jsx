@@ -3,49 +3,49 @@ import React, { useState, useEffect } from 'react';
 const galleryImages = [
   {
     id: 1,
-    src: 'https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+    src: '/Walk-In Closets.jpg',
     alt: 'Modern walk-in closet',
     category: 'walk-in'
   },
   {
     id: 2,
-    src: 'https://images.unsplash.com/photo-1600210492493-094691a317a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1974&q=80',
+    src: '/Reach-In Closets.jpg',
     alt: 'Reach-in closet',
     category: 'reach-in'
   },
   {
     id: 3,
-    src: 'https://images.unsplash.com/photo-1600210492767-7a2a9c4e7f6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1974&q=80',
+    src: '/Custom Closets.jpg',
     alt: 'Custom wardrobe',
     category: 'wardrobe'
   },
   {
     id: 4,
-    src: 'https://images.unsplash.com/photo-1600607686527-6fb886090705?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+    src: '/hero3.jpg',
     alt: 'Walk-in closet with island',
     category: 'walk-in'
   },
   {
     id: 5,
-    src: 'https://images.unsplash.com/photo-1600121848594-d8644e57abab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+    src: '/2def91d5240043cec613909b03f7811b.jpg',
     alt: 'Modern bedroom with built-in closets',
     category: 'bedroom'
   },
   {
     id: 6,
-    src: 'https://images.unsplash.com/photo-1595526114035-0d45a16a9185?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+    src: '/Walk-In Closets.jpg',
     alt: 'Luxury walk-in closet',
     category: 'walk-in'
   },
   {
     id: 7,
-    src: 'https://images.unsplash.com/photo-1616486336120-6d5bf5d82eef?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+    src: '/heo2.jpg',
     alt: 'Modern closet design',
     category: 'modern'
   },
   {
     id: 8,
-    src: 'https://images.unsplash.com/photo-1600210492493-094691a317a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1974&q=80',
+    src: '/Reach-In Closets.jpg',
     alt: 'Organized reach-in closet',
     category: 'reach-in'
   }
@@ -122,7 +122,7 @@ const Gallery = () => {
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
                 onError={(e) => {
                   // Fallback image if the original fails to load
-                  e.target.src = 'https://images.unsplash.com/photo-1600494603989-9650cf6ddd3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80';
+                  e.target.src = '/hero3.jpg';
                 }}
               />
               <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
@@ -160,7 +160,7 @@ const Gallery = () => {
                 className="w-full max-h-[80vh] object-contain"
                 onError={(e) => {
                   // Fallback image if the original fails to load
-                  e.target.src = 'https://images.unsplash.com/photo-1600494603989-9650cf6ddd3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80';
+                  e.target.src = '/hero3.jpg';
                 }}
               />
               <div className="mt-2 text-white text-center">

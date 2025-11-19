@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const PlanViewer = () => {
   // Sample plan image URL - replace with your actual plan image
-  const planImage = 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80';
+  const planImage = '/hero3.jpg';
 
   // Animation variants
   const containerVariants = {
