@@ -12,7 +12,7 @@ const solutions = [
       'Island and seating options'
     ],
     image: '/Walk-In Closets.jpg',
-    link: '/closets/walk-in'
+    link: '/closets'
   },
   {
     title: 'Custom Closets',
@@ -24,7 +24,7 @@ const solutions = [
       'Flexible storage options'
     ],
     image: '/Custom Closets.jpg',
-    link: '/closets/custom'
+    link: '/closets'
   },
   {
     title: 'Reach-In Closets',
@@ -36,7 +36,7 @@ const solutions = [
       'Budget-friendly options'
     ],
     image: '/Reach-In Closets.jpg',
-    link: '/closets/reach-in'
+    link: '/closets'
   }
 ];
 
