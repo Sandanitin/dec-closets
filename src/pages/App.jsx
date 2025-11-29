@@ -8,6 +8,7 @@ import About from '../components/About';
 import Contact from '../components/Contact';
 import Gallery from '../components/Gallery';
 import CNCServicesPage from './CNCServicesPage';
+import MDFDoorsPage from './MDFDoorsPage';
 import ScrollToTop from '../components/ScrollToTop';
 import Footer from '../components/Footer';
 import './index.css';
@@ -24,6 +25,7 @@ function App() {
             <Route path="/closets" element={<Closets />} />
             <Route path="/services" element={<Services />} />
             <Route path="/cnc-services" element={<CNCServicesPage />} />
+            <Route path="/mdf-doors" element={<MDFDoorsPage />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/gallery" element={<Gallery />} />
