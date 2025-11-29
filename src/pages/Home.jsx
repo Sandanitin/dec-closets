@@ -6,15 +6,15 @@ import Process from '../components/Process';
 import Testimonials from '../components/Testimonials';
 import About from '../components/About';
 import Services from '../components/Services';
+import Closets from '../components/Closets';
 
 const Home = () => {
   return (
     <div className="overflow-hidden">
       <Hero />
-      <Features />
-      <About />
-      <ClosetSolutions />
-      <Services />
+
+      
+  <Closets></Closets>
       <Process />
       <Testimonials />
     </div>
