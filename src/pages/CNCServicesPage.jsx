@@ -385,68 +385,6 @@ const CNCServicesPage = () => {
         </div>
       </section>
 
-      {/* Image Gallery Section */}
-      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our CNC Work Gallery</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Examples of our precision 3D carving and CNC routing projects
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="group overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
-              <img 
-                src="https://images.unsplash.com/photo-1595297772204-0ac90e9fc532?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                alt="3D Carved Wooden Panel" 
-                className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              <div className="p-6 bg-white">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">3D Carved Wooden Panel</h3>
-                <p className="text-gray-600">Intricate relief carving on solid wood</p>
-              </div>
-            </div>
-            
-            <div className="group overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
-              <img 
-                src="https://images.unsplash.com/photo-1591012911207-0dbac31f37da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                alt="CNC Cut Signage" 
-                className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              <div className="p-6 bg-white">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Custom Signage</h3>
-                <p className="text-gray-600">Precision cut acrylic signage with detailed engraving</p>
-              </div>
-            </div>
-            
-            <div className="group overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
-              <img 
-                src="https://images.unsplash.com/photo-1595297882807-4fb02eaf2f77?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                alt="Decorative Wall Panel" 
-                className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              <div className="p-6 bg-white">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Decorative Wall Panel</h3>
-                <p className="text-gray-600">Custom 3D relief wall panel for interior design</p>
-              </div>
-            </div>
-          </div>
-          
-          <div className="text-center mt-12">
-            <Link
-              to="/gallery"
-              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition duration-300"
-            >
-              View Full Gallery
-              <svg className="ml-2 -mr-1 h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-              </svg>
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0">

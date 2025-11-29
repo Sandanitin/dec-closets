@@ -1,5 +1,5 @@
 import React from 'react';
-import MDFDoorsNavbar from '../components/MDFDoorsNavbar';
+
 import Footer from '../components/Footer';
 
 const MDFDoorsPage = () => {
@@ -74,8 +74,7 @@ const MDFDoorsPage = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <MDFDoorsNavbar />
-      <main className="flex-grow pt-16">
+
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white pt-24 pb-16 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/30 to-blue-800/30"></div>
@@ -331,7 +330,7 @@ const MDFDoorsPage = () => {
             </div>
           </div>
         </section>
-      </main>
+    
       <Footer />
     </div>
   );
