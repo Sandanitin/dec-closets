@@ -3,13 +3,85 @@ import MDFDoorsNavbar from '../components/MDFDoorsNavbar';
 import Footer from '../components/Footer';
 
 const MDFDoorsPage = () => {
+  // Define all MDF door images with titles and descriptions
+  const mdfDoorImages = [
+    {
+      src: '/mdf/mdfdoors/Beaded Shaker Doors.png',
+      title: 'Beaded Shaker Doors',
+      description: 'Classic shaker style with elegant beading detail'
+    },
+    {
+      src: '/mdf/mdfdoors/Beaded with Groove.png',
+      title: 'Beaded with Groove',
+      description: 'Traditional design with groove accents'
+    },
+    {
+      src: '/mdf/mdfdoors/Bevel.png',
+      title: 'Bevel Doors',
+      description: 'Sophisticated beveled edge design'
+    },
+    {
+      src: '/mdf/mdfdoors/Double Shaker.png',
+      title: 'Double Shaker',
+      description: 'Enhanced shaker style with double panel'
+    },
+    {
+      src: '/mdf/mdfdoors/Inside Bead.png',
+      title: 'Inside Bead',
+      description: 'Clean lines with interior beading detail'
+    },
+    {
+      src: '/mdf/mdfdoors/Narrow Fluted.png',
+      title: 'Narrow Fluted',
+      description: 'Vertical fluting for a sleek appearance'
+    },
+    {
+      src: '/mdf/mdfdoors/Shaker Door.png',
+      title: 'Shaker Door',
+      description: 'Timeless shaker design for any space'
+    },
+    {
+      src: '/mdf/mdfdoors/Shaker Glass.png',
+      title: 'Shaker Glass',
+      description: 'Shaker style with glass insert option'
+    },
+    {
+      src: '/mdf/mdfdoors/Skinny Shaker.png',
+      title: 'Skinny Shaker',
+      description: 'Slender profile shaker design'
+    },
+    {
+      src: '/mdf/mdfdoors/Slim Shaker.png',
+      title: 'Slim Shaker',
+      description: 'Minimalist shaker door style'
+    },
+    {
+      src: '/mdf/mdfdoors/V-Groove Step Shaker.png',
+      title: 'V-Groove Step Shaker',
+      description: 'Step design with V-groove detailing'
+    },
+    {
+      src: '/mdf/mdfdoors/Wide Fluted.png',
+      title: 'Wide Fluted',
+      description: 'Bold vertical fluting design'
+    },
+    {
+      src: '/mdf/mdfdoors/Yours Choice.png',
+      title: 'Yours Choice',
+      description: 'Customizable design to match your vision'
+    }
+  ];
+
   return (
     <div className="min-h-screen flex flex-col">
-    
-
+      <MDFDoorsNavbar />
+      <main className="flex-grow pt-16">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white pt-24 pb-16 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/30 to-blue-800/30"></div>
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cGF0aCBkPSJNNTQgM0g2djU0aDQ4VjN6IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4=')]"></div>
+          </div>
           <div className="container mx-auto px-6 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">Premium MDF Doors</h1>
@@ -19,7 +91,7 @@ const MDFDoorsPage = () => {
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <a
                   href="/contact?service=mdf-doors"
-                  className="bg-white text-blue-700 hover:bg-blue-50 font-semibold px-8 py-4 rounded-lg text-lg transition duration-300"
+                  className="bg-white text-blue-700 hover:bg-blue-50 font-semibold px-8 py-4 rounded-lg text-lg transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                 >
                   Get a Free Quote
                 </a>
@@ -39,9 +111,9 @@ const MDFDoorsPage = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
-                  <span className="text-2xl text-blue-600">🎨</span>
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mb-6 shadow-lg">
+                  <span className="text-2xl text-white">🎨</span>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Smooth Finish</h3>
                 <p className="text-gray-600">
@@ -49,9 +121,9 @@ const MDFDoorsPage = () => {
                 </p>
               </div>
               
-              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
-                  <span className="text-2xl text-blue-600">📏</span>
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mb-6 shadow-lg">
+                  <span className="text-2xl text-white">📏</span>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Custom Sizing</h3>
                 <p className="text-gray-600">
@@ -59,15 +131,45 @@ const MDFDoorsPage = () => {
                 </p>
               </div>
               
-              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
-                  <span className="text-2xl text-blue-600">🌿</span>
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mb-6 shadow-lg">
+                  <span className="text-2xl text-white">🌿</span>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Eco-Friendly</h3>
                 <p className="text-gray-600">
                   Made from environmentally responsible materials, our MDF doors are a sustainable choice for conscious homeowners.
                 </p>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Complete Image Gallery Section */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">MDF Doors Collection</h2>
+              <p className="text-xl text-gray-600 mb-8">
+                Explore our complete range of premium MDF door designs
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {mdfDoorImages.map((door, index) => (
+                <div key={index} className="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                  <div className="h-64 overflow-hidden flex items-center justify-center bg-gray-100">
+                    <img 
+                      src={door.src} 
+                      alt={door.title} 
+                      className="w-full h-full object-contain p-4"
+                    />
+                  </div>
+                  <div className="p-6 bg-white">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">{door.title}</h3>
+                    <p className="text-gray-600">{door.description}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -83,7 +185,7 @@ const MDFDoorsPage = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
+              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
                 <div className="flex items-start">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl shadow-lg flex items-center justify-center mr-6 flex-shrink-0">
                     <span className="text-xl text-white font-bold">01</span>
@@ -97,7 +199,7 @@ const MDFDoorsPage = () => {
                 </div>
               </div>
               
-              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
+              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
                 <div className="flex items-start">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl shadow-lg flex items-center justify-center mr-6 flex-shrink-0">
                     <span className="text-xl text-white font-bold">02</span>
@@ -111,7 +213,7 @@ const MDFDoorsPage = () => {
                 </div>
               </div>
               
-              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
+              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
                 <div className="flex items-start">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl shadow-lg flex items-center justify-center mr-6 flex-shrink-0">
                     <span className="text-xl text-white font-bold">03</span>
@@ -125,7 +227,7 @@ const MDFDoorsPage = () => {
                 </div>
               </div>
               
-              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
+              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
                 <div className="flex items-start">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl shadow-lg flex items-center justify-center mr-6 flex-shrink-0">
                     <span className="text-xl text-white font-bold">04</span>
@@ -142,10 +244,69 @@ const MDFDoorsPage = () => {
           </div>
         </section>
 
+        {/* Testimonials Section */}
+        <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">What Our Customers Say</h2>
+              <p className="text-xl text-gray-600 mb-8">
+                Hear from homeowners who chose our MDF doors for their storage solutions
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              <div className="bg-white p-8 rounded-2xl shadow-lg">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                    JS
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-gray-900">Jennifer Smith</h3>
+                    <p className="text-gray-600">Houston, TX</p>
+                  </div>
+                </div>
+                <p className="text-gray-600 italic">
+                  "The MDF doors transformed our master closet! The smooth finish looks incredible and was so easy to customize. Worth every penny!"
+                </p>
+                <div className="flex text-yellow-400 mt-4">
+                  <span>★</span>
+                  <span>★</span>
+                  <span>★</span>
+                  <span>★</span>
+                  <span>★</span>
+                </div>
+              </div>
+              
+              <div className="bg-white p-8 rounded-2xl shadow-lg">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                    MR
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-gray-900">Michael Rodriguez</h3>
+                    <p className="text-gray-600">Austin, TX</p>
+                  </div>
+                </div>
+                <p className="text-gray-600 italic">
+                  "We've had our MDF doors for over two years now and they still look brand new. The quality is exceptional and the installation was seamless."
+                </p>
+                <div className="flex text-yellow-400 mt-4">
+                  <span>★</span>
+                  <span>★</span>
+                  <span>★</span>
+                  <span>★</span>
+                  <span>★</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="relative py-24 overflow-hidden">
           <div className="absolute inset-0">
             <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-800 opacity-95"></div>
+            <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cGF0aCBkPSJNNTQgM0g2djU0aDQ4VjN6IiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4xKSIgc3Ryb2tlLXdpZHRoPSIyIi8+Cjwvc3ZnPg==')]"></div>
           </div>
           
           <div className="relative z-10 container mx-auto px-6 text-center">
@@ -170,7 +331,7 @@ const MDFDoorsPage = () => {
             </div>
           </div>
         </section>
-
+      </main>
       <Footer />
     </div>
   );
