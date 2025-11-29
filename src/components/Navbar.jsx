@@ -39,34 +39,22 @@ const Navbar = () => {
                 Services
               </Link>
               <Link
-                to="/closets"
+                to="/cnc-services"
                 className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
               >
-                Closets
+                CNC
               </Link>
               <Link
                 to="/mdf-doors"
                 className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
               >
-                MDF Doors
-              </Link>
-              <Link
-                to="/about"
-                className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-              >
-                About
+                MDFDoors
               </Link>
               <Link
                 to="/contact"
                 className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
               >
                 Contact
-              </Link>
-              <Link
-                to="/cnc-services"
-                className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-              >
-                CNC Services
               </Link>
             </div>
           </div>
@@ -120,25 +108,18 @@ const Navbar = () => {
             Services
           </Link>
           <Link
-            to="/closets"
+            to="/cnc-services"
             className="text-gray-700 hover:bg-blue-50 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
             onClick={() => setIsOpen(false)}
           >
-            Closets
+            CNC
           </Link>
           <Link
             to="/mdf-doors"
             className="text-gray-700 hover:bg-blue-50 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
             onClick={() => setIsOpen(false)}
           >
-            MDF Doors
-          </Link>
-          <Link
-            to="/about"
-            className="text-gray-700 hover:bg-blue-50 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
-            onClick={() => setIsOpen(false)}
-          >
-            About
+            MDFDoors
           </Link>
           <Link
             to="/contact"
@@ -146,13 +127,6 @@ const Navbar = () => {
             onClick={() => setIsOpen(false)}
           >
             Contact
-          </Link>
-          <Link
-            to="/cnc-services"
-            className="text-gray-700 hover:bg-blue-50 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
-            onClick={() => setIsOpen(false)}
-          >
-            CNC Services
           </Link>
         </div>
       </div>
