@@ -257,12 +257,15 @@ const ServicesPage = () => {
     {
       icon: '⚙️',
       title: 'CNC Services',
-      description: 'Advanced 3D carving CNC router services for precision cutting and intricate designs on various materials including wood, MDF, and plastics for custom storage solutions.',
+      description: 'Advanced 3D carving CNC router services with high-precision 3-axis/4-axis machining capabilities. We specialize in detailed 3D sculpting, relief carving, custom engraving, and intricate pattern cutting on wood, MDF, plastics, and metals. Perfect for custom storage solutions, decorative panels, signage, and artistic sculptures.',
       features: [
-        '3D carving and routing capabilities',
-        'Precision cutting on multiple materials',
-        'Intricate design patterns and details',
-        'Fast turnaround times'
+        '3D relief carving and sculpting',
+        'Intricate pattern cutting on wood and MDF',
+        'Custom engraving and personalization',
+        'Complex geometric designs',
+        'Textured surface finishes',
+        'Precision cutting with 0.1mm accuracy',
+        'Custom art pieces and decorative elements'
       ]
     },
     {
