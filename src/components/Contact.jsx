@@ -52,7 +52,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold">Our Office</h4>
-                    <p className="text-sm opacity-80">123 Closet Street, Suite 100<br />New York, NY 10001</p>
+                    <p className="text-sm opacity-80">6040 Brittmoore Rd, Unit B<br />Houston TX 77041</p>
                   </div>
                 </div>
                 
@@ -64,7 +64,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold">Phone</h4>
-                    <p className="text-sm opacity-80">+1 (555) 123-4567</p>
+                    <p className="text-sm opacity-80">832-273-2953</p>
                   </div>
                 </div>
                 
@@ -76,10 +76,10 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold">Email</h4>
-                    <p className="text-sm opacity-80">info@decclosets.com</p>
+                    <p className="text-sm opacity-80">Info@decclosets.com</p>
                   </div>
                 </div>
-                
+
                 <div className="mt-8">
                   <h4 className="font-semibold mb-4">Business Hours</h4>
                   <div className="space-y-2 text-sm opacity-80">
