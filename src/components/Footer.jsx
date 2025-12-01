@@ -166,8 +166,15 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 text-sm">
-          <p>&copy; {currentYear} Dec Closets. All rights reserved. | Designed and Developed by <a href="https://www.vikrin.com/" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 transition-colors">Vikrin</a> | <a href="#" className="hover:text-white transition-colors">Privacy Policy</a> | <a href="#" className="hover:text-white transition-colors">Terms of Service</a></p>
+        <div className="border-t border-gray-800 mt-12 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
+            <p className="mb-2 md:mb-0">&copy; {currentYear} Dec Closets. All rights reserved.</p>
+            <p className="mb-2 md:mb-0">Designed and Developed by <a href="https://www.vikrin.com/" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 transition-colors">Vikrin</a></p>
+            <p>
+              <a href="#" className="hover:text-white transition-colors mr-4">Privacy Policy</a> 
+              <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>
