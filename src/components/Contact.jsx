@@ -1,6 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import toast from 'react-hot-toast';
 
 const Contact = () => {
+  const form = useRef();
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -18,27 +22,31 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
-    // Create mailto link with form data
-    const subject = encodeURIComponent(`Contact Form Submission from ${formData.name}`);
-    const body = encodeURIComponent(`Name: ${formData.name}
-Email: ${formData.email}
-Phone: ${formData.phone}
+    setLoading(true);
 
-Message:
-${formData.message}`);
-    const mailtoLink = `mailto:Info@decclosets.com?subject=${subject}&body=${body}`;
-    
-    // Open email client
-    window.location.href = mailtoLink;
-    
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      message: ''
-    });
+    // TODO: Replace these with your actual EmailJS credentials
+    // Sign up at https://www.emailjs.com/ to get your Service ID, Template ID, and Public Key
+    const serviceId = 'YOUR_SERVICE_ID';
+    const templateId = 'YOUR_TEMPLATE_ID';
+    const publicKey = 'YOUR_PUBLIC_KEY';
+
+    emailjs.sendForm(serviceId, templateId, form.current, publicKey)
+      .then((result) => {
+        console.log(result.text);
+        toast.success('Message sent successfully!');
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          message: ''
+        });
+      }, (error) => {
+        console.error(error.text);
+        toast.error('Failed to send message. Please try again.');
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   };
 
   return (
@@ -49,12 +57,12 @@ ${formData.message}`);
             <h2 className="text-3xl font-bold mb-4">Get In Touch</h2>
             <p className="text-gray-600">Have questions about our services? Contact us today for a free consultation.</p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-lg overflow-hidden">
             <div className="md:flex">
               <div className="md:w-1/2 bg-gradient-to-br from-purple-600 to-pink-500 text-white p-8">
                 <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
-                
+
                 <div className="flex items-start mb-6">
                   <div className="bg-white bg-opacity-20 p-2 rounded-full mr-4">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -67,7 +75,7 @@ ${formData.message}`);
                     <p className="text-sm opacity-80">6040 Brittmoore Rd, Unit B<br />Houston TX 77041</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start mb-6">
                   <div className="bg-white bg-opacity-20 p-2 rounded-full mr-4">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -79,7 +87,7 @@ ${formData.message}`);
                     <p className="text-sm opacity-80">832-273-2953</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="bg-white bg-opacity-20 p-2 rounded-full mr-4">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -101,9 +109,9 @@ ${formData.message}`);
                   </div>
                 </div>
               </div>
-              
+
               <div className="md:w-1/2 p-8">
-                <form onSubmit={handleSubmit}>
+                <form ref={form} onSubmit={handleSubmit}>
                   <div className="mb-6">
                     <label htmlFor="name" className="block text-gray-700 font-medium mb-2">Full Name</label>
                     <input
@@ -116,7 +124,7 @@ ${formData.message}`);
                       required
                     />
                   </div>
-                  
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <div>
                       <label htmlFor="email" className="block text-gray-700 font-medium mb-2">Email Address</label>
@@ -142,7 +150,7 @@ ${formData.message}`);
                       />
                     </div>
                   </div>
-                  
+
                   <div className="mb-6">
                     <label htmlFor="message" className="block text-gray-700 font-medium mb-2">Your Message</label>
                     <textarea
@@ -155,12 +163,13 @@ ${formData.message}`);
                       required
                     ></textarea>
                   </div>
-                  
+
                   <button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-purple-600 to-pink-500 text-white py-3 px-6 rounded-md font-medium hover:from-purple-700 hover:to-pink-600 transition duration-300"
+                    disabled={loading}
+                    className={`w-full bg-gradient-to-r from-purple-600 to-pink-500 text-white py-3 px-6 rounded-md font-medium hover:from-purple-700 hover:to-pink-600 transition duration-300 ${loading ? 'opacity-70 cursor-not-allowed' : ''}`}
                   >
-                    Send Message
+                    {loading ? 'Sending...' : 'Send Message'}
                   </button>
                 </form>
               </div>
