@@ -24,13 +24,8 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
-    // TODO: Replace these with your actual EmailJS credentials
-    // Sign up at https://www.emailjs.com/ to get your Service ID, Template ID, and Public Key
-    const serviceId = 'YOUR_SERVICE_ID';
-    const templateId = 'YOUR_TEMPLATE_ID';
-    const publicKey = 'YOUR_PUBLIC_KEY';
-
-    emailjs.sendForm(serviceId, templateId, form.current, publicKey)
+    // Using the initialized EmailJS instance
+    emailjs.sendForm('service_vvpe66o', 'template_q6yi57d', form.current)
       .then((result) => {
         console.log(result.text);
         toast.success('Message sent successfully!');
