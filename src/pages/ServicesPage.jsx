@@ -271,45 +271,7 @@ const ServicesPage = () => {
     {
       icon: '🚪',
       title: 'MDF Doors',
-      description: 'High-quality MDF doors with smooth finishes, perfect for custom closet systems.',
-      features: [
-        'Smooth, paint-ready surfaces',
-        'Consistent quality and durability',
-        'Custom sizing available',
-        'Environmentally friendly materials'
-      ]
-    },
-    {
-      icon: '🚪',
-      title: 'TrueCore Doors',
-      description: 'Premium steel doors from TrueCore.ca featuring 12-15 door options with superior durability and security. Choose from our curated selection of high-quality steel doors designed for long-lasting performance.',
-      features: [
-        '12-15 premium door style options',
-        'Superior steel construction',
-        'Enhanced security features',
-        'Long-lasting durability',
-        'Professional installation'
-      ]
-    }
-  ];
-
-  const technologies = [
-
-   
-    {
-      icon: '⚙️',
-      title: 'CNC Technology',
-      description: 'Our advanced 3D carving CNC router technology enables precision cutting and intricate designs on various materials including wood, MDF, and plastics for custom storage solutions.'
-    },
-    {
-      icon: '🚪',
-      title: 'MDF Doors',
       description: 'Our premium MDF doors offer durability and a smooth finish, providing the perfect canvas for any paint or finish.'
-    },
-    {
-      icon: '🚪',
-      title: 'TrueCore Doors',
-      description: 'Premium steel doors from TrueCore.ca featuring 12-15 distinct door styles, offering superior durability and security for your custom storage solutions. Each door is crafted with high-quality steel for long-lasting performance.'
     },
     {
       icon: '📐',

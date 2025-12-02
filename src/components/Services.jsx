@@ -74,17 +74,6 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 22V12h6v10" />
       </svg>
     )
-  },
-  {
-    title: 'TrueCore Doors',
-    description: 'Premium steel doors from TrueCore.ca featuring 12-15 door options with superior durability and security for your custom storage solutions. Choose from our selection of high-quality steel doors designed for long-lasting performance.',
-    icon: (
-      <svg className="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 22V12h6v10" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 9h6v6H9z" />
-      </svg>
-    )
   }
 ];
 
