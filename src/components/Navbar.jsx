@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 const Logo = () => (
   <div className="flex items-center space-x-2">
-    <img 
-      src="/logo.png" 
-      alt="Dec Closets Logo" 
+    <img
+      src="/logo.png"
+      alt="Dec Closets Logo"
       className="h-12 w-auto" // Decreased from h-16 to h-10
     />
     {/* <span className="text-xl font-bold text-gray-800">Dec Closets</span> */}
@@ -16,7 +16,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-lg fixed w-full z-50">
+    <nav className="bg-background-light shadow-lg fixed w-full z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex">
@@ -30,7 +30,7 @@ const Navbar = () => {
                 to="/"
                 className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
               >
-             Closets
+                Closets
               </Link>
               <Link
                 to="/services"
@@ -92,13 +92,13 @@ const Navbar = () => {
 
       {/* Mobile menu with improved UI */}
       <div className={`sm:hidden ${isOpen ? 'block' : 'hidden'} transition-all duration-300 ease-in-out`}>
-        <div className="px-2 pt-2 pb-3 space-y-1 bg-white shadow-lg rounded-b-lg">
+        <div className="px-2 pt-2 pb-3 space-y-1 bg-background-light shadow-lg rounded-b-lg">
           <Link
             to="/"
             className="text-gray-700 hover:bg-blue-50 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
             onClick={() => setIsOpen(false)}
           >
-     Closets
+            Closets
           </Link>
           <Link
             to="/services"

@@ -48,7 +48,7 @@ const Closets = () => {
   ];
 
   return (
-    <main className="py-16 bg-white">
+    <main className="py-16">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -61,13 +61,13 @@ const Closets = () => {
 
         <div className="space-y-24">
           {closetTypes.map((closet, index) => (
-            <div 
+            <div
               key={closet.id}
               className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-12`}
             >
               <div className="w-full md:w-1/2 h-80 rounded-xl overflow-hidden">
-                <img 
-                  src={closet.image} 
+                <img
+                  src={closet.image}
                   alt={closet.title}
                   className="w-full h-full object-cover"
                   onError={(e) => {
@@ -76,7 +76,7 @@ const Closets = () => {
                   }}
                 />
               </div>
-              
+
               <div className="w-full md:w-1/2">
                 <h2 className="text-3xl font-bold text-gray-900 mb-4">
                   {closet.title}
@@ -84,7 +84,7 @@ const Closets = () => {
                 <p className="text-lg text-gray-600 mb-6">
                   {closet.description}
                 </p>
-                
+
                 <ul className="space-y-3 mb-6">
                   {closet.features.map((feature, i) => (
                     <li key={i} className="flex items-start">
@@ -95,7 +95,7 @@ const Closets = () => {
                     </li>
                   ))}
                 </ul>
-                
+
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                   <span className="text-lg font-semibold text-blue-600">
                     {closet.price}

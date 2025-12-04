@@ -57,8 +57,8 @@ const Gallery = () => {
 
   const categories = ['all', ...new Set(galleryImages.map(image => image.category))];
 
-  const filteredImages = activeFilter === 'all' 
-    ? galleryImages 
+  const filteredImages = activeFilter === 'all'
+    ? galleryImages
     : galleryImages.filter(image => image.category === activeFilter);
 
   // Handle body overflow when modal is open
@@ -68,7 +68,7 @@ const Gallery = () => {
     } else {
       document.body.style.overflow = 'unset';
     }
-    
+
     // Cleanup function to reset overflow when component unmounts
     return () => {
       document.body.style.overflow = 'unset';
@@ -84,7 +84,7 @@ const Gallery = () => {
   };
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Our Work</h2>
@@ -97,11 +97,10 @@ const Gallery = () => {
             <button
               key={category}
               onClick={() => setActiveFilter(category)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                activeFilter === category
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${activeFilter === category
                   ? 'bg-purple-600 text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-              }`}
+                }`}
             >
               {category.charAt(0).toUpperCase() + category.slice(1).replace('-', ' ')}
             </button>
@@ -111,14 +110,14 @@ const Gallery = () => {
         {/* Gallery Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {filteredImages.map((image) => (
-            <div 
-              key={image.id} 
+            <div
+              key={image.id}
               className="relative group overflow-hidden rounded-lg cursor-pointer"
               onClick={() => openModal(image)}
             >
-              <img 
-                src={image.src} 
-                alt={image.alt} 
+              <img
+                src={image.src}
+                alt={image.alt}
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
                 onError={(e) => {
                   // Fallback image if the original fails to load
@@ -138,12 +137,12 @@ const Gallery = () => {
 
         {/* Image Modal */}
         {selectedImage && (
-          <div 
+          <div
             className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
             onClick={closeModal}
           >
             <div className="relative max-w-4xl w-full">
-              <button 
+              <button
                 onClick={(e) => {
                   e.stopPropagation();
                   closeModal();
@@ -154,9 +153,9 @@ const Gallery = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
-              <img 
-                src={selectedImage.src} 
-                alt={selectedImage.alt} 
+              <img
+                src={selectedImage.src}
+                alt={selectedImage.alt}
                 className="w-full max-h-[80vh] object-contain"
                 onError={(e) => {
                   // Fallback image if the original fails to load

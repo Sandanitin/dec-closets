@@ -79,14 +79,14 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="py-16 bg-gradient-to-br from-gray-50 to-gray-100">
+    <section className="py-16">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">Our Services</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div 
-              key={index} 
-              className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
+            <div
+              key={index}
+              className="bg-[#E8E4DF] p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
             >
               <div className="mb-6 flex justify-center">
                 {service.icon}

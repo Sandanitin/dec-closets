@@ -6,31 +6,50 @@
 @tailwind utilities;
 
 @keyframes blob {
-  0% { transform: translate(0px, 0px) scale(1); }
-  33% { transform: translate(30px, -50px) scale(1.1); }
-  66% { transform: translate(-20px, 20px) scale(0.9); }
-  100% { transform: translate(0px, 0px) scale(1); }
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
 }
 
-.animate-blob { 
-  animation: blob 7s infinite; 
+.animate-blob {
+  animation: blob 7s infinite;
 }
 
-.animation-delay-2000 { 
-  animation-delay: 2s; 
+.animation-delay-2000 {
+  animation-delay: 2s;
 }
 
-.animation-delay-4000 { 
-  animation-delay: 4s; 
+.animation-delay-4000 {
+  animation-delay: 4s;
 }
 
 :root {
-  --primary: #F7D4D4; /* Light Pink */
-  --secondary: #A8D8B9; /* Mint Green */
-  --text-dark: #4A2E2C; /* Chocolate Brown */
-  --background-light: #F5EEDC; /* Vanilla Beige */
-  --background-dark: #2C1A19; /* Dark Chocolate for Dark Mode */
-  --text-light: #F5EEDC; /* Vanilla Beige for Dark Mode Text */
+  --primary: #F7D4D4;
+  /* Light Pink */
+  --secondary: #A8D8B9;
+  /* Mint Green */
+  --text-dark: #4A2E2C;
+  /* Chocolate Brown */
+  --background-light: #D6C8B8;
+  /* Warm Taupe */
+  --background-dark: #2C1A19;
+  /* Dark Chocolate for Dark Mode */
+  --text-light: #F5EEDC;
+  /* Vanilla Beige for Dark Mode Text */
+  --card-bg: #E8E4DF;
+  /* Ash/Light Gray for Cards */
 }
 
 .material-symbols-outlined {
@@ -41,12 +60,25 @@
   body {
     @apply bg-background-light text-text-dark font-display dark:bg-background-dark dark:text-text-light;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-bold tracking-tight;
   }
-  
-  h1 { @apply text-4xl sm:text-5xl md:text-6xl; }
-  h2 { @apply text-3xl sm:text-4xl; }
-  h3 { @apply text-2xl sm:text-3xl; }
+
+  h1 {
+    @apply text-4xl sm:text-5xl md:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl sm:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl sm:text-3xl;
+  }
 }

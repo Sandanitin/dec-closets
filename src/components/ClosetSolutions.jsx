@@ -42,7 +42,7 @@ const solutions = [
 
 const ClosetSolutions = () => {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -52,16 +52,16 @@ const ClosetSolutions = () => {
             We offer a variety of custom closet designs to fit your needs and style
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {solutions.map((solution, index) => (
-            <div 
+            <div
               key={index}
               className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100"
             >
               <div className="h-48 overflow-hidden">
-                <img 
-                  src={solution.image} 
+                <img
+                  src={solution.image}
                   alt={solution.title}
                   className="w-full h-full object-cover"
                   onError={(e) => {
@@ -87,7 +87,7 @@ const ClosetSolutions = () => {
                     </li>
                   ))}
                 </ul>
-                <Link 
+                <Link
                   to={solution.link}
                   className="inline-block text-blue-600 hover:text-blue-800 font-medium"
                 >
