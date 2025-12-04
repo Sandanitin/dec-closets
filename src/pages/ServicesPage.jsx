@@ -542,12 +542,12 @@ const ServicesPage = () => {
       </section >
 
   {/* Process Section */ }
-  < section className = "py-20 " >
+  < section className = "py-20" >
     <div className="container mx-auto px-6">
       <SectionTitle subtitle="How It Works">Our Simple Process</SectionTitle>
 
       <div className="relative">
-        <div className="hidden md:flex absolute left-1/2 top-20 h-3/4 w-1 bg-gradient-to-b from-blue-100 to-blue-200 transform -translate-x-1/2 -z-0"></div>
+        <div className="hidden md:flex absolute left-1/2 top-20 h-3/4 w-1 bg-gradient-to-b from-text-dark/20 to-text-dark/40 transform -translate-x-1/2 -z-0"></div>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 max-w-6xl mx-auto">
           {[
@@ -584,10 +584,10 @@ const ServicesPage = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.2, duration: 0.5 }}
             >
-              <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center text-3xl text-white font-bold mx-auto mb-4 shadow-md">
+              <div className="w-20 h-20 bg-gradient-to-br from-text-dark to-background-dark rounded-2xl flex items-center justify-center text-3xl text-white font-bold mx-auto mb-4 shadow-md">
                 {step.icon}
               </div>
-              <div className="absolute -top-3 right-4 bg-[#E8E4DF] text-blue-600 font-bold text-sm px-3 py-1 rounded-full border border-blue-100">
+              <div className="absolute -top-3 right-4 bg-[#E8E4DF] text-text-dark font-bold text-sm px-3 py-1 rounded-full border border-text-dark/20">
                 {step.number}
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">{step.title}</h3>
@@ -597,10 +597,10 @@ const ServicesPage = () => {
         </div>
       </div>
     </div>
-      </section >
+  </section >
 
   {/* FAQ Section */ }
-  < section className = "py-20 " >
+  < section className = "py-20" >
     <div className="container mx-auto px-6">
       <SectionTitle subtitle="Need Help?">Frequently Asked Questions</SectionTitle>
 
@@ -624,7 +624,7 @@ const ServicesPage = () => {
             <p className="text-gray-600 mb-4">Still have questions?</p>
             <Link
               to="/contact"
-              className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors"
+              className="inline-flex items-center text-text-dark font-semibold hover:text-text-dark/80 transition-colors"
             >
               Contact Us
               <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -635,92 +635,92 @@ const ServicesPage = () => {
         </div>
       </div>
     </div>
-      </section >
+  </section >
 
   {/* CTA Section */ }
   < section className = "relative py-24 overflow-hidden" >
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-800 opacity-95"></div>
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cGF0aCBkPSJNNTQgM0g2djU0aDQ4VjN6IiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4xKSIgc3Ryb2tlLXdpZHRoPSIyIi8+Cjwvc3ZnPg==')]"></div>
-        </div>
+    <div className="absolute inset-0">
+      <div className="absolute inset-0 bg-gradient-to-r from-text-dark to-background-dark opacity-95"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cGF0aCBkPSJNNTQgM0g2djU0aDQ4VjN6IiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4xKSIgc3Ryb2tlLXdpZHRoPSIyIi8+Cjwvc3ZnPg==')]"></div>
+    </div>
 
-        <div className="relative z-10 container mx-auto px-6 text-center">
-          <motion.h2
-            className="text-4xl md:text-5xl font-bold mb-6"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            Ready to Transform Your Space?
-          </motion.h2>
+    <div className="relative z-10 container mx-auto px-6 text-center">
+      <motion.h2
+        className="text-4xl md:text-5xl font-bold mb-6 text-white"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        Ready to Transform Your Space?
+      </motion.h2>
 
-          <motion.p
-            className="text-xl mb-10 max-w-2xl mx-auto opacity-90"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 0.9, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1, duration: 0.6 }}
-          >
-            Contact us today to schedule a free consultation and discover how we can help you create the perfect storage solution for your home.
-          </motion.p>
+      <motion.p
+        className="text-xl mb-10 max-w-2xl mx-auto opacity-90 text-white"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 0.9, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.1, duration: 0.6 }}
+      >
+        Contact us today to schedule a free consultation and discover how we can help you create the perfect storage solution for your home.
+      </motion.p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            className="flex flex-col sm:flex-row justify-center gap-4"
-          >
-            <Link
-              to="/contact"
-              className="inline-flex items-center justify-center bg-[#E8E4DF] text-blue-700 hover:bg-blue-50 font-semibold px-8 py-4 rounded-lg text-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
-            >
-              Get a Free Quote
-              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
-            </Link>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.2, duration: 0.6 }}
+        className="flex flex-col sm:flex-row justify-center gap-4"
+      >
+        <Link
+          to="/contact"
+          className="inline-flex items-center justify-center bg-[#E8E4DF] text-text-dark hover:bg-white font-semibold px-8 py-4 rounded-lg text-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
+        >
+          Get a Free Quote
+          <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </Link>
 
-            <Link
-              to="/contact"
-              className="inline-flex items-center justify-center bg-transparent border-2 border-white text-white hover:bg-[#E8E4DF] hover:bg-opacity-10 font-semibold px-8 py-4 rounded-lg text-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
-            >
-              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
-              (123) 456-7890
-            </Link>
-          </motion.div>
-        </div>
+        <Link
+          to="/contact"
+          className="inline-flex items-center justify-center bg-transparent border-2 border-white text-white hover:bg-[#E8E4DF] hover:bg-opacity-10 font-semibold px-8 py-4 rounded-lg text-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
+        >
+          <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          (123) 456-7890
+        </Link>
+      </motion.div>
+    </div>
 
 {/* Animated Elements */ }
-        <motion.div
-          className="absolute top-1/4 left-1/4 w-32 h-32 bg-[#E8E4DF] rounded-full opacity-10"
-          animate={{
-            scale: [1, 1.5, 1],
-            opacity: [0.1, 0.2, 0.1],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            repeatType: "reverse",
-          }}
-        />
-        <motion.div
-          className="absolute bottom-1/3 right-1/4 w-20 h-20 bg-[#E8E4DF] rounded-full opacity-10"
-          animate={{
-            scale: [1, 1.8, 1],
-            opacity: [0.05, 0.15, 0.05],
-          }}
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-            repeatType: "reverse",
-            delay: 1
-          }}
-        />
-      </section >
+    <motion.div
+      className="absolute top-1/4 left-1/4 w-32 h-32 bg-[#E8E4DF] rounded-full opacity-10"
+      animate={{
+        scale: [1, 1.5, 1],
+        opacity: [0.1, 0.2, 0.1],
+      }}
+      transition={{
+        duration: 8,
+        repeat: Infinity,
+        repeatType: "reverse",
+      }}
+    />
+    <motion.div
+      className="absolute bottom-1/3 right-1/4 w-20 h-20 bg-[#E8E4DF] rounded-full opacity-10"
+      animate={{
+        scale: [1, 1.8, 1],
+        opacity: [0.05, 0.15, 0.05],
+      }}
+      transition={{
+        duration: 6,
+        repeat: Infinity,
+        repeatType: "reverse",
+        delay: 1
+      }}
+    />
+  </section >
     </div >
   );
 };
