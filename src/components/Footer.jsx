@@ -92,7 +92,7 @@ const Footer = () => {
                 alt="Dec Closets Logo"
                 className="h-10 w-auto"
               />
-              <h3 className="text-2xl font-bold">Dec Closets</h3>
+              {/* <h3 className="text-2xl font-bold">Dec Closets</h3> */}
             </div>
             <p className="text-gray-400 mb-6">
               Transform your space with our premium custom closet solutions. We design, build, and install closets that combine functionality with beautiful design.

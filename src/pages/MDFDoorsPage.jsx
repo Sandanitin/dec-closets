@@ -156,7 +156,10 @@ const MDFDoorsPage = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {mdfDoorImages.map((door, index) => (
               <div key={index} className="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-                <div className="h-64 overflow-hidden flex items-center justify-center bg-gray-100">
+                <div
+                  className="h-64 overflow-hidden flex items-center justify-center"
+                  style={{ backgroundColor: 'rgb(175, 170, 165)' }}
+                >
                   <img
                     src={door.src}
                     alt={door.title}
